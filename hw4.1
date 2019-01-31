@@ -1,0 +1,81 @@
+//*******************************//
+// Kady Fudge                    //
+// HW 4.1 If_else statements     //
+// CSCI 207                      //
+// 1/31/19                       //
+//*******************************//
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+char stateStatus;
+double tuition;
+char campusRoom;
+double roomFee;
+char mealCharge;
+double mealPlan;
+double fees;
+double total;
+
+int main ()
+{
+ cout << "Enter an I for in-state or O for out-of-state: ";
+ cin >> stateStatus;
+ cout << endl;
+ 
+ if ((stateStatus !== I)&&(stateStatus !== O)) {
+   cout << "ERROR; invalid input for state tuition.";
+   return EXIT_FAILURE;
+   }
+ if (stateStatus == I) {
+   tuition = 7615.00;
+   }
+  else {
+    tuition = 14743.00;
+    }
+   
+ cout << "Do you wish to pay for a room on campus? Y or N: ";
+ cin >> campusRoom;
+ cout << endl;
+ 
+ if ((campusRoom !== Y)&&(campusRoom !== N)) {
+   cout << "Error; invalid input for room";
+   return EXIT_FAILURE;
+   }
+ if (campusRoom == Y) {
+   roomFee = 2029.00;
+   }
+ else {
+   roomFee = 0.00;
+   }
+ 
+ cout << "Do you want a meal plan? Y or N: ";
+ cin >> mealCharge;
+ cout << endl;
+
+ if ((mealCharge !== Y)&&(mealCharge !== N)) {
+   cout << "Error; invalid input for meal";
+   return EXIT_FAILURE;
+   }
+ if (mealCharge == Y) {
+   mealPlan = 1766;
+   )
+ else {
+   mealPlan = 0.00;
+   }
+   
+ fees = 25.00;
+ 
+ total = tuition + roomFee + mealPlan + fees;
+ 
+ cout << "Fees for one semester" <<endl;
+ cout << "Tuition: $" << tuition << endl;
+ cout << "Room: $" << roomFee << endl;
+ cout << "Meal Plan: $" << mealPlan <<endl;
+ cout << "Fee: $" << fees << endl;
+ cout << "Total: $" << endl;
+      
+ return EXIT_SUCCESS;
+}
